@@ -1,0 +1,4 @@
+,time,price,change,volume,amount,type
+0,"alert(""当天没有数据"");",,,,,
+1,window.close();,,,,,
+2,</script>,,,,,
