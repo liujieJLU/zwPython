@@ -13,7 +13,7 @@ class HistoryData(object):
 	index_tick_data ='历史分笔\\'
 	index_time_data = '实时分笔\\'
 	index_today_tick_data = '当日历史分笔\\'
-	index_get_index = '大盘指数行情表\\'
+	index_get_index = '大盘指数行情列表\\'
 	index_get_sina_dd = '大单交易数据\\'
 	father_index = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 
@@ -99,5 +99,5 @@ hs =  HistoryData('600848', '2017-05-04','2015-03-02', 'D')
 # hs.getTickData()
 # hs.getRealtimeData()
 # hs.getToadyStickData()
-# hs.getGetIndexData()
+hs.getGetIndexData()
 # hs.getSinaDdData()
