@@ -24,6 +24,7 @@ class HistoryData(object):
 		self.startDate = startDate
 		self.endDate = endDate
 		self.kType = kType
+
     # 获取历史行情数据（get_hist_data的数据从2014年12月8号开始至今）
 	def getHistoryData(self):
 		file_name = self.code + '_' + self.startDate + '_' + self.endDate + '.csv'
@@ -65,7 +66,7 @@ class HistoryData(object):
 		data.to_csv(path, encoding='utf-8')
 		print (file_name)
 	
-	# 获取当日产生的分笔明细数据(此方法未测试)
+	# 获取当日产生的分笔明细数据
 	def getToadyStickData(self):
 		file_name = self.code + '_' + self.today_date + '.csv'
 		path = self.index + self.index_today_tick_data + file_name
@@ -91,13 +92,12 @@ class HistoryData(object):
 
 
 
-hs =  HistoryData('600848', '2017-05-04','2015-03-02', 'D')
+hs =  HistoryData('600848', '2017-01-19','2017-05-02', 'D')
 # hs.getHistoryData()
 # hs.getHData()
-# hs.index_hist_data='2222'
 # hs.getTodayData()
 # hs.getTickData()
 # hs.getRealtimeData()
 # hs.getToadyStickData()
-hs.getGetIndexData()
+# hs.getGetIndexData()
 # hs.getSinaDdData()
