@@ -22,7 +22,7 @@ class TopListData(object):
 
     # 每日龙虎榜列表
 	def getTopList(self):
-		file_name = 'top_list.csv'
+		file_name = self.startDate+'_top_list.csv'
 		path = self.index + self.index_top_list + file_name
 		data = ts.top_list(date=self.startDate)
 		data.to_csv(path, encoding='utf-8')
@@ -60,7 +60,7 @@ class TopListData(object):
 		data.to_csv(path, encoding='utf-8')
 		print(file_name)
 
-tl=  TopListData('600848', '2017-05-11','2015-03-02', 'D')
+tl=  TopListData('600848', '2017-04-11','2015-03-02', 'D')
 # tl.getTopList()
 # tl.getCapTops()
 # tl.getBrokerTops()

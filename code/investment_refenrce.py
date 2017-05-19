@@ -74,10 +74,10 @@ class Macoreconomics(object):
 		print(file_name)
 
     # 沪市融资融券明细数据(symbol：标的代码，6位数字e.g.600848，默认为空’‘)
-	def getShMarginsDetails(self,code):
+	def getShMarginsDetails(self):
 		file_name = self.startDate+'_'+self.endDate+'_sh_margins_details.csv'
 		path = self.index + self.index_sh_margins_details + file_name
-		data = ts.sh_margin_details(start = self.startDate, end = self.endDate, symbol=code)
+		data = ts.sh_margin_details(start = self.startDate, end = self.endDate, symbol=self.code)
 		data.to_csv(path, encoding='utf-8')
 		print(file_name)
 
@@ -98,14 +98,14 @@ class Macoreconomics(object):
 		print(file_name)
 
 
-me =Macoreconomics('600848', '2017-01-03', '2017-5-12', 'D',2016, 1)
-# me.getProfit(60)
-# me.getForecast()
-# me.getXSGData(3)
-# me.getFundHold()
+me =Macoreconomics('600848', '2016-01-03', '2016-12-12', 'D',2015, 1)
+me.getProfit(60)
+me.getForecast()
+me.getXSGData(3)
+me.getFundHold()
 # me.getNewStocks()
-# me.getShMargins()
-# me.getShMarginsDetails('601989')
-# me.getSzMargins()
-# me.getSzMarginsDetails()
+me.getShMargins()
+me.getShMarginsDetails()
+me.getSzMargins()
+me.getSzMarginsDetails()
 

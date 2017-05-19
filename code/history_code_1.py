@@ -66,11 +66,12 @@ class HistoryData(object):
 		data.to_csv(path, encoding='utf-8')
 		print (file_name)
 	
-	# 获取当日产生的分笔明细数据
+	# 获取当日产生的分笔明细数据(默认获取当天数据)
 	def getToadyStickData(self):
 		file_name = self.code + '_' + self.today_date + '.csv'
 		path = self.index + self.index_today_tick_data + file_name
 		data = ts.get_today_ticks(code=self.code)
+		# data.head(10)
 		data.to_csv(path, encoding='utf-8')
 		print(file_name)
 
@@ -92,7 +93,7 @@ class HistoryData(object):
 
 
 
-hs =  HistoryData('600848', '2017-01-19','2017-05-02', 'D')
+hs =  HistoryData('601628', '2016-01-06','2016-12-02', 'D')
 # hs.getHistoryData()
 # hs.getHData()
 # hs.getTodayData()
