@@ -81,7 +81,7 @@ class BascisInfoData(object):
 		print(file_name)
 
 hs =  BascisInfoData('600848', '2017-05-04','2015-03-02', 'D')
-# hs.getStockBasics()
+hs.getStockBasics()
 # hs.getReportData(2016, 2)
 # hs.getProfitData(2017, 1)
 # hs.getOperationData(2017, 1)
